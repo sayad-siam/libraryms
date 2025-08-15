@@ -74,44 +74,49 @@ cd banglish-to-bangla-transformer
 python app.py
 ```
 
-## Example Workflow
+## 🖥 Example Workflow
 
-. Draw/write Banglish on the canvas.
-. Click Recognize → OCR extracts text.
-. Transformer model transliterates Banglish → Bangla.
-. Output is shown instantly in the UI.
+> Draw/write Banglish on the canvas.
+> Click Recognize → OCR extracts text.
+> Transformer model transliterates Banglish → Bangla.
+> Output is shown instantly in the UI.
 
-## Dataset Visualization (Sample)
+## 📊 Dataset Visualization (Sample)
 
-. Word Frequency analysis shows common Banglish tokens like ami, tumi, ki, kore.
-. Sentence length distribution from 1–17 words.
-. Banglish sentence lengths often exceed Bangla due to suffix differences.
+- Word Frequency analysis shows common Banglish tokens like ami, tumi, ki, kore.
+- Sentence length distribution from 1–17 words.
+- Banglish sentence lengths often exceed Bangla due to suffix differences.
 
-## Future Work
+## 🔮 Future Work
 
-Custom handwriting recognition model for both Banglish & Bangla scripts.
+- Custom handwriting recognition model for both Banglish & Bangla scripts.
+- Bidirectional transliteration (Banglish ↔ Bangla).
+- Larger, more diverse dataset.
+- UI improvements (live transliteration, mobile app).
+- Integration with NLP tools (sentiment analysis, grammar correction).
 
-Bidirectional transliteration (Banglish ↔ Bangla).
-
-Larger, more diverse dataset.
-
-UI improvements (live transliteration, mobile app).
-
-Integration with NLP tools (sentiment analysis, grammar correction).
-
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
 
-🙌 Acknowledgements
+## 🙌 Acknowledgements
 
-Shahjalal University of Science and Technology (SUST) — Department of CSE
+**Shahjalal University of Science and Technology (SUST) — Department of CSE**
 
-Supervisor: Prof. Md Masum
+**Supervisor: Prof. Md Masum**
 
 Libraries: TensorFlow, EasyOCR, Flask
 
-📚 Citation
+## 📚 Citation
 
 If you use this work, please cite:
+
+@project{siam2024banglish2bangla,
+  title={Attention-Based Neural Machine Translation Between Banglish and Bangla Using Transformer Model},
+  author={Md. Sayad Alam Siam and Tanjil Bhoiyan},
+  year={2024},
+  institution={Shahjalal University of Science and Technology}
+}
+
+
 
