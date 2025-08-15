@@ -61,36 +61,29 @@ The app will run on `http://localhost:3000`.
 
 ## 👤 User Roles
 
-Role	Permissions
+### Role	Permissions
 
-Librarian	Full book and user management
-Member	Borrow and return books
-Viewer	View books only
+| User         | Role       |
+|--------------|------------|
+| Librarian    | Full book and user management |
+| Member       | Borrow and return books |
+| Viewer       | View books only |
 
-📂 Project Structure
+## 📂 Project Structure
 
 library-management-system/
-│
-├── public/          # Static assets (CSS, JS, Images)
-├── views/           # Handlebars templates
-├── routes/          # Express route files
-├── models/          # Sequelize models
-├── migrations/      # Sequelize migration files
-├── config/          # DB configuration
-├── app.js           # Main app entry
-└── package.json
+
+- public/          # Static assets (CSS, JS, Images)
+- views/           # Handlebars templates
+- routes/          # Express route files
+- models/          # Sequelize models
+- migrations/      # Sequelize migration files
+- config/          # DB configuration
+- app.js           # Main app entry
+- package.json
 
 
----
-
-📷 Screenshots
-
-(Add screenshots of the UI here)
-
-
----
-
-🧑‍💻 Developer Notes
+## 🧑‍💻 Developer Notes
 
 Express Routing → Docs
 
