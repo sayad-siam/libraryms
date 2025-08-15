@@ -106,10 +106,3 @@ This project is licensed under the MIT License.
 **Supervisor: Prof. Md Masum**
 
 Libraries: TensorFlow, EasyOCR, Flask
-
-  year={2024},
-  institution={Shahjalal University of Science and Technology}
-}
-
-
-
