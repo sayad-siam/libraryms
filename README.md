@@ -45,17 +45,23 @@ cd library-management-system
 
 ### Install Dependencies
 
-```npm install```
+```
+npm install
+```
 
 ### Database Setup
 
 By default, the project uses SQLite. Sequelize will create the database file automatically when running migrations or starting the app.
 
-```npx sequelize-cli db:migrate```
+```
+npx sequelize-cli db:migrate
+```
 
 ### Run the Application
 
-```npm start```
+```
+npm start
+```
 
 The app will run on `http://localhost:3000`.
 
