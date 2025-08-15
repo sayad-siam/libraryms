@@ -1,0 +1,21 @@
+/index
+
+/access/open
+/access/close
+
+/book/view/:bookid
+/s/book/new (Image Storage is temporarily disabled) (%APP_ROOT%\routes\secure\book\util.js)
+/s/book/edit/:bookid
+/s/book/delete/:bookid
+
+/s/account/view/:accountid
+/s/account/new
+/s/account/edit/:accountid
+/s/account/delete/:accountid
+
+/s/borrow/view (librarian can see all member, member can only see through self filter)
+/s/borrow/delete/:uuid
+/s/borrow/request/:bookid?userid=...
+
+[NotImplemented]
+/fine (librarian can see all member, member can only see through self filter)

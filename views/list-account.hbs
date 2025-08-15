@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-end">
+    <a href="{{createAccountApi}}" class="btn btn-success">Create New User</a>
+</div>
+<div class="row g-0">
+    {{#Users}}
+    <div class="col-12 col-lg-6 p-2">
+        <div class="card text-center">
+            <div class="card-body row">
+                <div class="col-12 col-sm-9 text-sm-start">
+                    <h5 class="card-title">{{username}}</h5>
+                    <h6 class="card-text mb-2 text-body-secondary">
+                        {{#unless authority}}
+                        Member
+                        {{/unless}}
+                        {{#if authority}}
+                        Librarian
+                        {{/if}}
+                    </h6>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <a href="{{../deleteAccountApi}}{{id}}" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/Users}}
+</div>

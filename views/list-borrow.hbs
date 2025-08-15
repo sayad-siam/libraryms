@@ -1,0 +1,43 @@
+{{#Borrows}}
+<div class="container pb-4">
+    {{#if delay_days}}
+    <div class="card border-danger-subtle flex-md-row">
+        <div class="card-body col-12 col-lg-6">
+            <h5 class="card-title text-danger-emphasis"><small class="text-danger d-none d-lg-inline">Book Title</small>
+                {{Title}}</h5>
+            <h6 class="card-text text-danger">User : {{username}}</h6>
+        </div>
+        <div class="card-body text-danger col-12 col-lg-4">
+            <h6 class="card-text">Borrowed at : {{claim_date}}</h6>
+            <h6 class="card-text">Return by : {{delay_date}}</h6>
+            <h6 class="card-text">Delay days : {{delay_days}}</h6>
+            <h6 class="card-text">Fine amount : {{fine_amount}} <span>Taka</span></h6>
+        </div>
+        {{#if ../Librarian}}
+        <div class="card-body col-12 col-lg-2">
+            <a href="{{../delApi}}{{id}}" class="btn btn-danger">Return book</a>
+        </div>
+        {{/if}}
+    </div>
+    {{else}}
+    <div class="card flex-md-row">
+        <div class="card-body col-12 col-lg-6">
+            <h5 class="card-title"><small class="text-body-secondary d-none d-lg-inline">Book Title</small>
+                {{Title}}</h5>
+            <h6 class="card-text text-body-secondary">User : {{username}}</h6>
+        </div>
+        <div class="card-body text-body-secondary col-12 col-lg-4">
+            <h6 class="card-text">Borrowed at : {{claim_date}}</h6>
+            <h6 class="card-text">Return by : {{delay_date}}</h6>
+            <h6 class="card-text">Claim days : {{claim_days}}</h6>
+            <h6 class="card-text text-success">Fine amount : {{fine_amount}}</h6>
+        </div>
+        {{#if ../Librarian}}
+        <div class="card-body col-12 col-lg-2">
+            <a href="{{../delApi}}{{id}}" class="btn btn-success">Return book</a>
+        </div>
+        {{/if}}
+    </div>
+    {{/if}}
+</div>
+{{/Borrows}}

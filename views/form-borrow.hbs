@@ -1,0 +1,26 @@
+<div class="container border border-secondary rounded pt-5 px-4 bg-body-tertiary" style="max-width: 460px;">
+    <form action="{{baseUrl}}" method="post">
+        <div class="mb-3">
+            <label {{!-- for="exampleFormControlInput1" --}} class="form-label">{{Title}}</label>
+            {{!-- <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="username"
+                name="username"> --}}
+        </div>
+        <div class="mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Username</label>
+            <select class="form-select" id="inputGroupSelect01" name="userid">
+                <option selected>Choose...</option>
+                {{#members}}
+                <option value="{{id}}">{{username}}</option>
+                {{/members}}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Days of possession</label>
+            <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="Days of possession"
+                name="claim_days">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mb-3">Confirm borrow</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,46 @@
+<div class="container border border-secondary rounded px-5 pt-5 bg-body-tertiary" style="max-width: 460px;">
+    <form action="{{baseUrl}}" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleFormControlInput0" class="form-label">Image</label>
+            <input type="file" class="form-control" id="exampleFormControlInput0" placeholder="Image" name="Image">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title" name="Title"
+                value="{{Title}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput7" class="form-label">Genre</label>
+            <input type="text" class="form-control" id="exampleFormControlInput7"
+                placeholder="Scifi, horror, psycho, thriller ..." name="Genre" value="{{Genre}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Author</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Author" name="Author"
+                value="{{Author}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput3" class="form-label">Publisher</label>
+            <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Publisher"
+                name="Publisher" value="{{Publisher}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput4" class="form-label">Publication date</label>
+            <input type="date" class="form-control" id="exampleFormControlInput4" placeholder="Publication date"
+                name="Publication_date" value="{{Publication_date}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput5" class="form-label">Number of pages</label>
+            <input type="number" class="form-control" id="exampleFormControlInput5" placeholder="Number of pages"
+                name="Pages" value="{{Pages}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput6" class="form-label">ISBN-13</label>
+            <input type="number" class="form-control" id="exampleFormControlInput6" placeholder="ISBN-13" name="ISBN13"
+                value="{{ISBN13}}">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary mb-3">Confirm entry</button>
+        </div>
+    </form>
+</div>

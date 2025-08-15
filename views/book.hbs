@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="container d-sm-flex" style="max-width: 720px;">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+            <img src="/images/{{Image}}" alt="{{Title}}" style="height: 70vh;">
+        </div>
+        <div class="col-12 col-md-6 mt-5 d-md-inline d-flex flex-column align-items-center">
+            <h1>{{Title}}</h1>
+            <p><small><a class="btn bg-white" href="/book/author/{{Author}}">{{Author}}</a></small></p>
+            <p>Genre:
+                {{#Genres}}
+                <a class="btn badge bg-primary text-white" href="/book/genre/{{Genre}}" role="button">{{Genre}}</a>
+                {{!-- <span class="badge bg-primary text-white">{{Genre}}</span> --}}
+                {{/Genres}}
+            </p>
+            <p>Publisher: <a class="btn bg-white" href="/book/publisher/{{Publisher}}">{{Publisher}}</a></p>
+            <p>Publication date: {{Publication_date}}</p>
+            <p>Pages: {{Pages}}</p>
+            <p>ISBN-13: {{ISBN13}}</p>
+
+            {{#if Librarian}}
+            <a href="/s/borrow/request/{{id}}" role="button" class="btn btn-outline-success">Lend</a>
+            <a href="/s/book/edit/{{id}}" role="button" class="btn btn-outline-info">Edit</a>
+            <a href="/s/book/delete/{{id}}" role="button" class="btn btn-outline-danger">Remove</a>
+            {{/if}}
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container border border-secondary rounded p-5 bg-body-tertiary" style="max-width: 460px;">
+    <form action="{{baseUrl}}" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="username"
+                name="username">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="password"
+                name="password">
+        </div>
+        <div class="mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Account type</label>
+            <select class="form-select" id="inputGroupSelect01" name="authority">
+                <option selected>Choose...</option>
+                <option value=0>Member</option>
+                <option value=1>Librarian</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>libraryMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/css/bootstrap.min.css' />
+</head>
+
+<body>
+  {{!-- navbar --}}
+  <nav class="navbar sticky-top bg-black text-white">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand text-white">LibraryMS</a>
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item px-3">
+            <a class="nav-link text-white" href="/">Books</a>
+          </li>
+          {{#if Librarian}}
+          <li class="nav-item px-3">
+            <a class="nav-link text-white" href="/s/book/new">Add New Book</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link text-white" href="/s/account/view">User List</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link text-white" href="/s/borrow/view">Loan List</a>
+          </li>
+          {{!-- <li class="nav-item px-3">
+            <a class="nav-link text-white" href="/s/fine/view">Fines</a>
+          </li> --}}
+          {{/if}}
+          {{#if Member}}
+          <li class="nav-item px-3">
+            <a class="nav-link text-white" href="/s/borrow/view">Borrow List</a>
+          </li>
+          {{!-- <li class="nav-item px-3">
+            <a class="nav-link text-white" href="/s/fine/view">Fines</a>
+          </li> --}}
+          {{/if}}
+        </ul>
+      <a href="/access/" class="btn btn-outline-light">Manage</a>
+    </div>
+  </nav>
+  {{!-- navbar --}}
+  <div class="container">
+    {{{body}}}
+  </div>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
