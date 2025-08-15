@@ -76,10 +76,10 @@ python app.py
 
 ## 🖥 Example Workflow
 
-> Draw/write Banglish on the canvas.
-> Click Recognize → OCR extracts text.
-> Transformer model transliterates Banglish → Bangla.
-> Output is shown instantly in the UI.
+- Draw/write Banglish on the canvas.
+- Click Recognize → OCR extracts text.
+- Transformer model transliterates Banglish → Bangla.
+- Output is shown instantly in the UI.
 
 ## 📊 Dataset Visualization (Sample)
 
@@ -107,13 +107,6 @@ This project is licensed under the MIT License.
 
 Libraries: TensorFlow, EasyOCR, Flask
 
-## 📚 Citation
-
-If you use this work, please cite:
-
-@project{siam2024banglish2bangla,
-  title={Attention-Based Neural Machine Translation Between Banglish and Bangla Using Transformer Model},
-  author={Md. Sayad Alam Siam and Tanjil Bhoiyan},
   year={2024},
   institution={Shahjalal University of Science and Technology}
 }
