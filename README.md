@@ -1,108 +1,103 @@
-# Attention-Based Neural Machine Translation Between Banglish and Bangla Using Transformer Model
+# 📚 Library Management System
 
-A web-based system that converts **Banglish** (Bengali written in Roman script) into **Bangla script** using:
-- **Optical Character Recognition (OCR)** for handwritten Banglish text.
-- **Transformer-based Neural Machine Translation (NMT)** for accurate, context-aware transliteration.
-- **Flask** backend with a responsive **HTML/CSS/JavaScript** frontend.
-
-![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+A web-based application to streamline the management of library resources — from adding and removing books to handling user authentication and lending activities. Built with *Node.js, **Express, **Bootstrap, **Handlebars, **Multer, and **Sequelize*.
 
 ---
 
 ## 🚀 Features
-- **Banglish Handwriting Recognition** via `EasyOCR`.
-- **Transformer Model** for high-accuracy Banglish → Bangla transliteration.
-- **Real-time Web Interface** with responsive frontend (HTML + CSS + Tailwind).
-- **Dataset Visualization** & preprocessing for optimal model performance.
-- **Flask API** integration for seamless OCR + translation pipeline.
+
+- *Book Management*
+  - Add, remove, and edit book records
+  - Store book cover images
+- *User Authentication*
+  - Secure login for Librarians and Members
+  - Different permissions for different roles
+- *Lending Process*
+  - Borrow and return books
+  - Track lending history
+- *User Roles*
+  - *Librarians*: Manage books and users
+  - *Members*: Borrow/return books
+  - *Viewers*: Browse the catalogue
 
 ---
 
-## 📂 Project Structure
-1. dataset/ # Banglish-Bangla parallel sentences
-2. preprocessing/ # Data cleaning, tokenization, padding
-3. model/ # Transformer model implementation
-4. static/ # Frontend assets (CSS, JS)
-5. templates/ # HTML templates
-6. app.py # Flask backend
-7. requirements.txt # Dependencies
-8. README.md # Project documentation
+## 🛠 Tech Stack
 
-## 🧠 Technical Overview
-
-### 1. OCR Pipeline
-1. User writes Banglish text on canvas.
-2. Drawing converted to Base64 PNG.
-3. **EasyOCR** extracts Banglish text from image.
-4. Text sent to NMT model for transliteration.
-
-### 2. Dataset
-- **Total Sentences:** 8,948
-- **Total Words:**  
-  - Banglish: 51,906 (11,121 unique)  
-  - Bangla: 51,777 (9,346 unique)
-- Sources: *Vashantor*, human-annotated Banglish-Bangla corpus, custom data.
-- Preprocessing: Cleaning, tokenization, SOS/EOS tokens, word-index mapping, padding to 30 tokens.
-
-### 3. Transformer Model
-- **Embedding Dimension:** 256  
-- **Hidden Layer:** 512  
-- **Layers:** 4 encoder + 4 decoder  
-- **Attention Heads:** 8  
-- **Dropout:** 0.1  
-- **Optimizer:** Adam with custom learning rate schedule  
-- **Loss:** Sparse Categorical Crossentropy  
-- **Training:** 50 epochs, batch size 256
-
-**Result:**  
-- Accuracy: **87.65%**  
-- Loss: **0.7440**
+| Component    | Technology |
+|--------------|------------|
+| Backend      | Node.js + Express |
+| Frontend     | Bootstrap + Handlebars |
+| File Uploads | Multer |
+| ORM          | Sequelize |
+| Database     | SQLite |
+| Rendering    | Handlebars Templating |
 
 ---
 
-## 💻 Installation & Usage
+## 📦 Installation & Setup
 
-### Clone the repository
+### Clone the Repository
 ```
-git clone https://github.com/your-username/banglish-to-bangla-transformer.git
-cd banglish-to-bangla-transformer
-```
-### Run the Flask server
-```
-python app.py
+git clone https://github.com/yourusername/library-management-system.git
+cd library-management-system
 ```
 
-## 🖥 Example Workflow
+### Install Dependencies
 
-- Draw/write Banglish on the canvas.
-- Click Recognize → OCR extracts text.
-- Transformer model transliterates Banglish → Bangla.
-- Output is shown instantly in the UI.
+```npm install```
 
-## 📊 Dataset Visualization (Sample)
+### Database Setup
 
-- Word Frequency analysis shows common Banglish tokens like ami, tumi, ki, kore.
-- Sentence length distribution from 1–17 words.
-- Banglish sentence lengths often exceed Bangla due to suffix differences.
+By default, the project uses SQLite. Sequelize will create the database file automatically when running migrations or starting the app.
 
-## 🔮 Future Work
+```npx sequelize-cli db:migrate```
 
-- Custom handwriting recognition model for both Banglish & Bangla scripts.
-- Bidirectional transliteration (Banglish ↔ Bangla).
-- Larger, more diverse dataset.
-- UI improvements (live transliteration, mobile app).
-- Integration with NLP tools (sentiment analysis, grammar correction).
+### Run the Application
 
-## 📜 License
+```npm start```
 
-This project is licensed under the MIT License.
+The app will run on `http://localhost:3000`.
 
-## 🙌 Acknowledgements
+## 👤 User Roles
 
-**Shahjalal University of Science and Technology (SUST) — Department of CSE**
+Role	Permissions
 
-**Supervisor: Prof. Md Masum**
+Librarian	Full book and user management
+Member	Borrow and return books
+Viewer	View books only
 
-Libraries: TensorFlow, EasyOCR, Flask
+📂 Project Structure
+
+library-management-system/
+│
+├── public/          # Static assets (CSS, JS, Images)
+├── views/           # Handlebars templates
+├── routes/          # Express route files
+├── models/          # Sequelize models
+├── migrations/      # Sequelize migration files
+├── config/          # DB configuration
+├── app.js           # Main app entry
+└── package.json
+
+
+---
+
+📷 Screenshots
+
+(Add screenshots of the UI here)
+
+
+---
+
+🧑‍💻 Developer Notes
+
+Express Routing → Docs
+
+Handlebars Guide → Docs
+
+Multer File Uploads → Docs
+
+Bootstrap Styling → Docs
+
+Sequelize ORM → Docs
